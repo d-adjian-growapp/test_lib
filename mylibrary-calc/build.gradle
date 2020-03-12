@@ -65,18 +65,25 @@ afterEvaluate {
                 pom {
                     name = 'fs.moneybase.pci.android.sdk'
                     description = 'A concise description of my library'
-                    url = 'http://www.example.com/library'
+                    url = 'https://github.com/d-adjian-growapp/test_lib.git'
                     properties = [
                             myProp: "value",
                             "prop.with.dots": "anotherValue"
                     ]
                     scm {
-                        connection = 'scm:git:git://example.com/my-library.git'
-                        developerConnection = 'scm:git:ssh://example.com/my-library.git'
-                        url = 'http://example.com/my-library/'
+                        connection = 'scm:git:git://github.com/d-adjian-growapp/test_lib.git'
+                        developerConnection = 'scm:git:ssh://github.com/d-adjian-growapp/test_lib.git'
+                        url = 'https://github.com/d-adjian-growapp/test_lib.git'
                     }
                 }
             }
         }
+        repositories {
+            maven {
+                // change to point to your repo, e.g. http://my.org/repo
+                url = "git@github.com:d-adjian-growapp/test_lib.git"
+            }
+        }
+
     }
 }
